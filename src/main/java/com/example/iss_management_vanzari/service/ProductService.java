@@ -44,7 +44,7 @@ public class ProductService {
         }
     }
 
-    public Product getProductById(int productId) {
+    public Product getProductById(Long productId) {
         try (Session session = sessionFactory.openSession()) {
             return session.get(Product.class, productId);
         }

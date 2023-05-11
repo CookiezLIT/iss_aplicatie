@@ -1,3 +1,5 @@
+package services;
+
 import com.example.iss_management_vanzari.models.Product;
 import com.example.iss_management_vanzari.service.ProductService;
 import org.hibernate.SessionFactory;
