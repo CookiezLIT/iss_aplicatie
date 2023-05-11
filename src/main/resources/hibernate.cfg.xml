@@ -1,0 +1,27 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="connection.url">jdbc:sqlite:vanzari.sqlite</property>
+
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+<!--         SQL dialect-->
+        <property name="dialect">org.sqlite.hibernate.dialect.SQLiteDialect
+        </property>
+
+
+
+        <!-- Mapping files -->
+        <mapping class="com.example.iss_management_vanzari.models.Employee"/>
+        <mapping class="com.example.iss_management_vanzari.models.Manager"/>
+    </session-factory>
+</hibernate-configuration>
